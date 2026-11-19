@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="video">
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/_U3U_fY5gA8?si=HnZBBhW8YBSaLJ0e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="titulo">
+    <h1>El universo de los Caballeros del Zodiaco</h1>
+    <h2>Descubri los personajes y su historia</h2>
+</div>
+
+<div class="descubri-personajes">
+    {% include  'principales.html' %}
+
+</div>
+
+<section class="novedades">
+    <h2>Novedades</h2>
+    <div class="novedades-columnas">
+        <article>
+            <p class="destacado">
+                Destacada: El Legado de Saint Seiya sigue vivo
+Nuevos proyectos y reediciones: La franquicia creada por Masami Kurumada continúa expandiendo su universo conmemorando su legado histórico. Los fanáticos de todo el mundo siguen celebrando tanto la mítica serie clásica de los 80/90 como las recientes adaptaciones y mangas derivados (spin-offs).
+
+
+
+            </p>
+
+        </article>
+        <article>
+            <p class="destacado">
+                El impacto eterno de la armadura sagrada: A través de plataformas de streaming y ediciones especiales en formato físico, las aventuras de Seiya, Shiryu, Hyoga, Shun e Ikki siguen conquistando a nuevas generaciones que descubren por primera vez la batalla contra el Santuario y Hades.
+                Saint Seiya nació como manga creado por Masami Kurumada y se empezó a publicar en la revista Weekly Shōnen Jump a comienzos de 1986. El anime lo produjo Toei Animation y se emitió en Japón entre octubre de 1986 y abril de 1989, con 114 episodios. El diseño de personajes estuvo a cargo de Shingo Araki y Michi Himeno, y su opening más famoso es “Pegasus Fantasy”.
+                La historia siguió con la saga de Hades, adaptada en OVAs entre 2002 y 2008. Después llegaron The Lost Canvas (2009), Omega (2012), Soul of Gold (2015), Saintia Shō (2018), la serie de Netflix (2019) y una película live-action (2023). En 2026 la franquicia cumple 40 años.
+                Las armaduras se basan en las 88 constelaciones y se dividen en tres rangos: 12 de Oro, 24 de Plata y 48 de Bronce. Los cinco protagonistas son Caballeros de Bronce: Seiya (Pegaso), Shiryu (Dragón), Hyoga (Cisne), Shun (Andrómeda) e Ikki (Fénix). Protegen a Atenea, que reencarna en la joven Saori Kido, y su fuerza viene del Cosmos, la energía interior.
+
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="categorias">
+    <h2>Categorías</h2>
+
+    <div class="categorias-grilla">
+        {% for nombre in categorias %}
+        <a href="{{url_for('personajes', categoria=nombre)}}" class="categoria">
+                <span class="categoria-nombre">{{ nombre }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+
+
+{% endblock %}

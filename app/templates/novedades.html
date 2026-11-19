@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<section class="novedades2">
+    <h1>Últimas Novedades</h1>
+    <p class="nov-parrafo">Enterate de las noticias del universo Saint Seiya.</p>
+
+    <div class="noticia">
+        <img src="{{ url_for('static', filename='img/seiya.jpg') }}">
+        <div>
+            <h2>El regreso de los Caballeros de Bronce</h2>
+            <p>Seiya y sus compañeros vuelven a luchar para proteger a la diosa Atenea.</p>
+        </div>
+    </div>
+
+    <div class="noticia">
+        <img src="{{ url_for('static', filename='img/shaka.jpg') }}">
+        <div>
+            <h2>Las doce Armaduras Doradas</h2>
+            <p>Descubrí el poder de los doce Caballeros Dorados del Santuario.</p>
+        </div>
+    </div>
+
+    <div class="noticia">
+        <img src="{{ url_for('static', filename='img/athena.jpg') }}">
+        <div>
+            <h2>La batalla por Atenea</h2>
+            <p>Los Santos arriesgan sus vidas para defender a la diosa de la justicia.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+

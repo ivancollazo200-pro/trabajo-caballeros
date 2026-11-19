@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h1>
+    {% if categoria %}
+    {{categoria}}
+    {% else %}
+       Todos los personajes
+    {% endif %}
+</h1>
+
+{% if personajes %}
+    {% include 'principales.html' %}
+{% else %}
+     <p class="aviso">No encontramos personajes con esos filtros, Proba otro nombre</p>
+{% endif %}
+
+{% endblock %} 

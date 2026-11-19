@@ -1,0 +1,21 @@
+<div class="grilla">
+    {%  for principal in personajes  %}
+
+    <article class="tarjeta">
+        <img src="{{url_for('static' , filename='img/' + principal.imagen)}}" alt="">
+
+        <div class="tarjeta-contenido">
+           
+            <h2>{{principal.nombre}}</h2>
+
+            
+
+            
+
+            <a class="boton" href="{{url_for('detalle', id=principal.id)}}">Ver Personaje</a>
+        </div>
+    </article>
+
+
+    {% endfor   %}
+</div>

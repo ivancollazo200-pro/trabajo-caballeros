@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<section class="categorias">
+    <h2>Categorías</h2>
+
+    <div class="categorias-grilla">
+        {% for nombre in categorias %}
+        <a href="{{url_for('personajes', categoria=nombre)}}" class="categoria">
+                <span class="categoria-nombre">{{ nombre }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titulo}} - Caballeros del Zodiaco - Archivo de personajes</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="cabecera-formulario">
+            <form action="{{url_for('personajes')}}" method="GET" class="buscador">
+                <input type="search" name="q" id="q" placeholder="Buscador...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <div class="cabecera-logo">
+            <a href="/">
+                <img class="logo" src="{{url_for('static' , filename='img/logo.png')}}" alt="">
+            </a>
+        </div>
+
+        <nav class="cabecera-nav">
+            <a href="{{url_for('index')}}">Inicio</a>
+            <a href="{{url_for('novedad')}}">Novedades</a>
+            <a href="{{url_for('personajes')}}">Personajes</a>
+            <a href="{{url_for('categoria')}}">Categorias</a>
+            <a href="{{url_for('creditos')}}">Creditos</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block contenido %}
+        {% endblock %}
+    </main>
+
+    <footer>
+
+        <div class="footer-superior">
+            <a href="/">
+                <img width="200px" class="logo" src="{{url_for('static' , filename='img/logo.png')}}" alt="">
+            </a>
+
+            <p>EL UNIVERSO DE LOS CABALLEROS DEL ZODIACO</p>
+
+            <div class="redes-sociales">
+                <p>SEGUINOS</p>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-inferior">
+            <p>Politica de Privacidad</p>
+            <p>Todos los Derechos Reservados</p>
+            <p>&copy; 2026</p>
+        </div>
+    </footer>
+</body>
+
+</html>
