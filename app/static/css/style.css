@@ -442,8 +442,8 @@ footer {
 }
 
 .noticia img {
-    width: 230px;
-    height: 160px;
+    width: 270px;
+    height: 260px;
     object-fit: contain;
     border-radius: 8px;
 }
@@ -507,3 +507,4 @@ footer {
     font-size: 14px;
     line-height: 1.5;
 }
+

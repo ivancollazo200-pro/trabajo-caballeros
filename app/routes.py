@@ -24,7 +24,7 @@ def novedad():
 
 @app.route('/creditos')
 def creditos():
-    return render_template('creditos.html')
+    return render_template('creditos.html',titulo="Creditos")
 
 
 @app.route('/personajes')
@@ -43,5 +43,11 @@ def detalle(id):
         abort(404)
 
     return render_template('detalle.html', personaje=personaje, titulo=personaje.nombre)
+
+
+@app.errorhandler(404)
+def pagina_no_encontrada(error):
+    return  render_template('404.html', titulo='Pagina no encontrada'),404
+
 
     
